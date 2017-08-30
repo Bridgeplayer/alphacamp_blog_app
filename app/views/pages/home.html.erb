@@ -1,15 +1,22 @@
-<div container = "container">
-	
-	<div class = "row">
-		<div class = "col-xs-4 col-xs-offset-4">
+<h1>Hello World </h1>
 
-			<h1>Hello World </h1>
+<%= link_to 'about', about_path%>
+<%= link_to 'contact', contact_path%>
 
-			<%= link_to 'about', about_path%>
-			<%= link_to 'contact', contact_path%> 
-		</div>
-	</div>
+<h2>Home Viewcounter </h2> 
+	<%	if (Viewcounter.find_by page_name: "Home") != nil	%>
+		<%= (Viewcounter.find_by page_name: "Home").view_count %>
+	<% end %>
 
-</div>
+<h2>About Viewcounter </h2> 
+	<% if (Viewcounter.find_by page_name: "About") != nil %>
+		<%= (Viewcounter.find_by page_name: "About").view_count %>
+	<% end %>		
+
+<h2>Contact Viewcounter </h2> 
+	<% if (Viewcounter.find_by page_name: "Contact") != nil %>
+		<%= (Viewcounter.find_by page_name: "Contact").view_count %> 
+	<% end%>
+
 
 

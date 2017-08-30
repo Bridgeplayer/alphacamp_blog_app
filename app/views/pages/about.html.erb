@@ -2,3 +2,6 @@
 
 <%= link_to 'home', root_path %>
 <%= link_to 'contact', contact_path %>
+
+<h2>About Viewcounter <h2> 
+<%= (Viewcounter.find_by page_name: "About").view_count %>
